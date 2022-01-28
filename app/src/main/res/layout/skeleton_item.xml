@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.faltenreich.skeletonlayout.SkeletonLayout
+        android:id="@+id/skeletonLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_marginTop="8dp"
+            android:id="@+id/viewSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#8F8D8D"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/itemCardPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewSeparator"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            app:cardCornerRadius="40dp"
+            android:backgroundTint="#CFC8C8"
+            android:background="#2E2727"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/imageCardPhoto"
+                android:src="@drawable/ic_android_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/itemNameSite"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/itemCardPhoto"
+            app:layout_constraintTop_toTopOf="@id/itemCardPhoto"
+            android:layout_marginStart="8dp"
+            tools:text="Breno Carvalho"/>
+
+        <TextView
+            android:id="@+id/itemPostDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/itemNameSite"
+            app:layout_constraintStart_toStartOf="@id/itemNameSite"
+            android:textSize="10sp"
+            tools:text="17/12 12:36h"/>
+
+        <TextView
+            android:id="@+id/itemDescriptionPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/itemCardPhoto"
+            app:layout_constraintStart_toStartOf="@id/itemCardPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="12sp"
+            tools:text="Homem Aranha: Marvel tentou esconder os spoillers até os ultimos segundos da estreia do teioso, porém agora todos sabem da verdade "/>
+
+        <ImageView
+            android:id="@+id/itemImagePost"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemDescriptionPost"
+            android:layout_marginTop="4dp"
+            />
+
+        <View
+            android:id="@+id/viewCobreUrl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#DFD8D8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemImagePost"
+            app:layout_constraintBottom_toBottomOf="@id/itemUrl"/>
+
+        <TextView
+            android:id="@+id/itemUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/itemDescriptionPost"
+            tools:text="https://spacenews.com/satellogic-nearing-completion-of-spac-merger/"
+            app:layout_constraintTop_toBottomOf="@id/itemImagePost"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="13sp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/itemFavoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/itemCardPhoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_smile"/>
+
+    </com.faltenreich.skeletonlayout.SkeletonLayout>
+
+
+
+    <!--    <View-->
+    <!--        android:id="@+id/viewSeparatorBaixo"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="4dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/itemUrl"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="#8F8D8D"/>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
